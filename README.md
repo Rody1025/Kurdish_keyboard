@@ -27,7 +27,7 @@ The Java Keystroke Listener Application is a simple Java program that listens fo
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is an open source.
 
 ## Acknowledgments
 
