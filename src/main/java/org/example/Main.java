@@ -11,7 +11,6 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
 /**
@@ -19,7 +18,7 @@ import javax.swing.SwingUtilities;
  * The class listens for specific key combinations (Ctrl+1, Ctrl+2, Ctrl+3, Ctrl+4, and Ctrl+5)
  * and types corresponding special characters based on the Caps Lock state.
  */
-public class GlobalKeyListenerExample implements NativeKeyListener {
+public class Main implements NativeKeyListener {
 
     private boolean ctrlPressed = false;
     private boolean keyProcessed = false;
@@ -38,7 +37,7 @@ public class GlobalKeyListenerExample implements NativeKeyListener {
 
             // Set the preferred size, layout, and other properties of the frame as needed.
 
-            GlobalKeyListenerExample listener = new GlobalKeyListenerExample();
+            Main listener = new Main();
             GlobalScreen.addNativeKeyListener(listener);
 
             frame.pack();
@@ -51,7 +50,7 @@ public class GlobalKeyListenerExample implements NativeKeyListener {
         try {
             GlobalScreen.registerNativeHook();
 
-            GlobalKeyListenerExample listener = new GlobalKeyListenerExample();
+            Main listener = new Main();
             GlobalScreen.addNativeKeyListener(listener);
 
         } catch (NativeHookException ex) {
